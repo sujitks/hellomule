@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
         <http:listener config-ref="HTTP_Listener_Configuration" path="/${helloEndpoint.Firsts.Path}" allowedMethods="Get" doc:name="HTTP"/>
         <flow-ref name="hellomuleSub_Flow" doc:name=""/>
         <response>
-            <set-payload value="Message from hello first end point" doc:name="Set Payload"/>
+            <set-payload value="from first flow" doc:name="Set Payload"/>
         </response>
     </flow>
     <sub-flow name="hellomuleSub_Flow">
