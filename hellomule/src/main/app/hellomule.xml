@@ -9,7 +9,7 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
    <context:property-placeholder location="data.properties" />
-    <http:listener-config name="HTTP_Listener_Configuration" host="54.171.63.36" port="8082" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8082" doc:name="HTTP Listener Configuration"/>
     <flow name="hellomuleFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/${helloEndpoint.Firsts.Path}" allowedMethods="Get" doc:name="HTTP"/>
         <flow-ref name="hellomuleSub_Flow" doc:name=""/>
